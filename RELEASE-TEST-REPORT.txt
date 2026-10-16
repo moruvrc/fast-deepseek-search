@@ -1,0 +1,18 @@
+moru's deepseek 2.0.0 — проверка артефактов
+
+СТАТУС: релиз-кандидат. Не является подтвержденной продакшен-сборкой.
+Пройдены: TypeScript, 13 JS unit-тестов, браузерные offline mock тесты основного редактора (6 сценариев), выделения/iframe/Shadow DOM, зеркала DOM, UI Chromium 320 px.
+Не пройдены/не доступны: загрузка установленного MV3 расширения в Chromium данной среды (политика браузера); реальная авторизация/отправка в DeepSeek; отдельные живые тесты Opera, Opera GX, Edge, Brave, Yandex, Vivaldi, Firefox.
+Действие до релиза: провести smoke + E2E тесты во всех поддерживаемых браузерах, проверить подпись и магазины.
+
+АВТОПРОВЕРКА АРХИВОВ:
+PASS firefox       55748 B SHA256 5785dd5e1d09e358f744163c42232bd5bc0b8b908f58b803cb730f1004a7ef34
+PASS chrome        55975 B SHA256 a549de2314d3aa29ed394b0785f3a19a166235f37c460a0c48c78c04b11107b3
+PASS edge          55991 B SHA256 8885328365222a3d2f2a6d81d27343d672dcea72ee6764d78b97ae4d5098c0a8
+PASS brave         55979 B SHA256 623f8da3ec2ed0477daac5ee36deb39fa4559eec7538b2a22760816d9bccb25b
+PASS vivaldi       55986 B SHA256 8a6631ae63caeb72621f0caea4623cbbb2d46a5c5dd056cb0e48aa8565afa655
+PASS opera         55945 B SHA256 4825f833761724e570a434ba6c3fe2c96e0b1861ee5fdeb89fd32ab50e748855
+PASS opera-gx      55958 B SHA256 24553c88aaf463b97359af04fe22242bada5f6a563e178084b2e9b1274aa0109
+PASS yandex        56027 B SHA256 2e11100eb3160c854b7a94efd732499ef372072acfc99f87001e144a69ff248b
+PASS chromium      55971 B SHA256 d89cc52dfa6d374dd56d6910ef18cc19ca7791d15331a94b8d962b218d7ca602
+SOURCE ZIP SHA256 75363596e0671318249f8674eaae863c39037dee5caab8bcfbeb5f79fc8ab196

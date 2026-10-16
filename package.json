@@ -1,0 +1,17 @@
+{
+  "name": "morus-deepseek",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Cross-browser DeepSeek selection extension (release candidate)",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "check": "npm run typecheck && npm test",
+    "build:all": "node scripts/build-all.mjs",
+    "test:all": "npm run typecheck && npm test && npm run build:all"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

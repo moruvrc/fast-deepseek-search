@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>moru's deepseek</title>
+  <link rel="stylesheet" href="fallback.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo"><img src="../assets/whale.svg" alt="" /></div>
+      <span class="title">moru's deepseek</span>
+      <button id="settings" class="icon" title="Настройки" aria-label="Настройки">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5"/></svg>
+      </button>
+    </header>
+    <main class="main">
+      <div class="state">
+        <div class="state-art" aria-hidden="true">
+          <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+          <img src="../assets/whale.svg" alt="" />
+        </div>
+        <div class="eyebrow">DEEPSEEK · ОФИЦИАЛЬНЫЙ ЧАТ</div>
+        <h1>Интеллект рядом<br>с вашим текстом</h1>
+        <p>Выделите фрагмент на сайте, нажмите одну из двух кнопок и продолжайте работу с DeepSeek в боковой панели.</p>
+        <button id="connect" class="primary">Подключить DeepSeek <span>↗</span></button>
+        <p class="hint" id="notice">Официальный сайт откроется здесь, без API-ключа и отдельной вкладки.</p>
+      </div>
+    </main>
+    <footer class="bottom"><span class="light"></span> Отправка текста только в chat.deepseek.com</footer>
+    <section class="settings" id="options" hidden>
+      <div class="settings-title">Настройки <button id="close" class="icon" aria-label="Закрыть">×</button></div>
+      <label class="setting"><span>Кнопки при выделении</span><input type="checkbox" data-setting="toolbar" checked /></label>
+      <label class="setting"><span>Анимации</span><input type="checkbox" data-setting="animations" checked /></label>
+      <label class="setting"><span>Открывать панель автоматически</span><input type="checkbox" data-setting="autoOpen" checked /></label>
+      <div class="info">moru's deepseek 2.0.0<br>Независимое расширение, не является продуктом DeepSeek.</div>
+    </section>
+  </div>
+  <script src="fallback.js"></script>
+</body>
+</html>

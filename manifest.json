@@ -1,0 +1,80 @@
+{
+  "manifest_version": 3,
+  "name": "moru's deepseek",
+  "version": "2.0.0",
+  "description": "Выделяйте текст и отправляйте его в официальный DeepSeek прямо в боковой панели Firefox.",
+  "permissions": [
+    "storage",
+    "menus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_title": "Открыть moru's deepseek",
+    "default_icon": {
+      "16": "assets/whale-16.png",
+      "32": "assets/whale-32.png"
+    }
+  },
+  "sidebar_action": {
+    "default_title": "moru's deepseek",
+    "default_icon": "assets/whale.svg",
+    "default_panel": "sidebar/fallback.html",
+    "open_at_install": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_origin_as_fallback": true
+    },
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "deepseek.js"
+      ],
+      "css": [
+        "deepseek.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "deepseek-editor-main.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ask-deepseek@local.extension",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "websiteContent"
+        ]
+      }
+    }
+  }
+}
